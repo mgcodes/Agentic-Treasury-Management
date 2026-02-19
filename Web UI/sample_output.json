@@ -1,0 +1,705 @@
+{
+  "node_outputs": {
+    "cash_position": {
+      "status": "success",
+      "output": {
+        "overview": {
+          "per_account": {
+            "OPER": {
+              "balance": 46000.0,
+              "source": "intraday"
+            },
+            "CONC": {
+              "balance": 200000.0,
+              "source": "accounts"
+            },
+            "PAY": {
+              "balance": 12000.0,
+              "source": "accounts"
+            },
+            "MMF-01": {
+              "balance": 50000.0,
+              "source": "accounts"
+            }
+          },
+          "total_balance": 308000.0,
+          "negative_accounts": [],
+          "zero_accounts": [],
+          "account_count": 4
+        },
+        "human_summary": "[LLM simulated] Cash position summary for prompt length 353"
+      }
+    },
+    "reconciliation": {
+      "status": "success",
+      "output": {
+        "overview": {
+          "matched_count": 2,
+          "matched": [
+            {
+              "bank_id": "b1",
+              "ledger_id": "l1",
+              "amount": 25000.0
+            },
+            {
+              "bank_id": "b2",
+              "ledger_id": "l2",
+              "amount": -12000.0
+            }
+          ],
+          "unmatched_bank": [
+            {
+              "id": "b3",
+              "date": "2026-01-18",
+              "amount": -3000.0,
+              "type": "debit",
+              "description": "Fees"
+            }
+          ],
+          "unmatched_ledger": [],
+          "exceptions": [
+            {
+              "source": "bank",
+              "id": "b3",
+              "amount": -3000.0
+            }
+          ]
+        },
+        "human_summary": "[LLM simulated] Reconciliation summary for prompt length 379"
+      }
+    },
+    "liquidity": {
+      "status": "success",
+      "output": {
+        "overview": {
+          "total_balance": 307000.0,
+          "average_balance": 76750.0,
+          "largest_account": {
+            "id": "CONC",
+            "balance": 200000.0
+          },
+          "liquid_balance_estimate": 0.0,
+          "low_balance_count": 0,
+          "accounts": [
+            {
+              "id": "CONC",
+              "balance": 200000.0,
+              "pct_of_total": 65.15,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "OPER",
+              "balance": 45000.0,
+              "pct_of_total": 14.66,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "PAY",
+              "balance": 12000.0,
+              "pct_of_total": 3.91,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "MMF-01",
+              "balance": 50000.0,
+              "pct_of_total": 16.29,
+              "liquidity_score": null,
+              "low_balance": false
+            }
+          ]
+        },
+        "human_summary": "[LLM simulated] Liquidity overview for prompt length 649"
+      }
+    },
+    "cash_forecast": {
+      "status": "success",
+      "output": {
+        "forecast": {
+          "short_term_total": 0.0,
+          "mid_term_total": 0.0,
+          "long_term_total": 0.0,
+          "daily": [
+            {
+              "date": "2026-01-18",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-19",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-20",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-21",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-22",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-23",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-24",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-25",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-26",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-27",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-28",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-29",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-30",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-31",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-01",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-02",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-03",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-04",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-05",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-06",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-07",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-08",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-09",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-10",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-11",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-12",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-13",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-14",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-15",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-16",
+              "net": 0.0
+            }
+          ],
+          "as_of": "2026-01-18"
+        },
+        "human_summary": "[LLM simulated] Cash forecast summary for prompt length 1204"
+      }
+    },
+    "cashflow": {
+      "status": "success",
+      "output": {
+        "as_of": null,
+        "total_balance": 307000.0,
+        "total_inflows": 23000.0,
+        "total_outflows": 23000.0,
+        "net_forecast": 0.0,
+        "ending_cash": 307000.0,
+        "daily_net": 0.0,
+        "recommended_buffer": 2300.0,
+        "recommendations": [
+          "Invest surplus cash or increase sweep frequency"
+        ],
+        "llm_summary": "[LLM simulated response] Summary for prompt length 78"
+      }
+    },
+    "sweep": {
+      "status": "success",
+      "output": {
+        "moves": [
+          {
+            "from": "CONC",
+            "to": null,
+            "amount": 200000.0
+          },
+          {
+            "from": "OPER",
+            "to": null,
+            "amount": 30000.0
+          },
+          {
+            "from": "PAY",
+            "to": null,
+            "amount": 9000.0
+          },
+          {
+            "from": "MMF-01",
+            "to": null,
+            "amount": 50000.0
+          }
+        ],
+        "summary": {
+          "total_excess": 289000.0,
+          "total_shortfall": 0.0,
+          "moves_count": 4
+        },
+        "recommendation": {
+          "frequency": "daily",
+          "buffer_amount": 180.0
+        },
+        "llm_summary": "[LLM simulated] Sweep analysis total_excess=289000.0 moves=4..."
+      }
+    },
+    "investment": {
+      "status": "success",
+      "output": {
+        "allocations": [
+          {
+            "instrument": "inst3",
+            "tenor": "3m",
+            "amount": 76750.0
+          },
+          {
+            "instrument": "inst2",
+            "tenor": "1m",
+            "amount": 76750.0
+          },
+          {
+            "instrument": "inst1",
+            "tenor": "overnight",
+            "amount": 76750.0
+          }
+        ],
+        "summary": {
+          "excess_cash": 307000.0,
+          "total_allocated": 230250.0,
+          "remaining_cash": 76750.0
+        },
+        "allocations_by_tenor": {
+          "3m": {
+            "total": 76750.0,
+            "instruments": [
+              {
+                "instrument": "inst3",
+                "amount": 76750.0
+              }
+            ]
+          },
+          "1m": {
+            "total": 76750.0,
+            "instruments": [
+              {
+                "instrument": "inst2",
+                "amount": 76750.0
+              }
+            ]
+          },
+          "overnight": {
+            "total": 76750.0,
+            "instruments": [
+              {
+                "instrument": "inst1",
+                "amount": 76750.0
+              }
+            ]
+          }
+        },
+        "decision_summary": "Applied tenor weights: {'short': 0.5, 'medium': 0.3, 'long': 0.2} -- Per-instrument cap: 76750.0 -- 3m: allocated 76750.0 across 1 instruments -- 1m: allocated 76750.0 across 1 instruments -- Overnight: allocated 76750.0 across 1 instruments -- Remaining unallocated cash: 76750.0",
+        "llm_summary": "[LLM simulated] Investment plan summary for prompt length 57"
+      }
+    },
+    "reporting": {
+      "status": "success",
+      "output": {
+        "dashboard": {
+          "total_balance": 307000.0,
+          "forecast": {
+            "short_term_total": 0.0,
+            "mid_term_total": 0.0,
+            "long_term_total": 0.0,
+            "daily": [
+                {
+                  "date": "2026-01-18",
+                  "net": 0.0
+                },
+              {
+                "date": "2026-01-19",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-20",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-21",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-22",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-23",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-24",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-25",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-26",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-27",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-28",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-29",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-30",
+                "net": 0.0
+              },
+              {
+                "date": "2026-01-31",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-01",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-02",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-03",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-04",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-05",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-06",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-07",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-08",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-09",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-10",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-11",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-12",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-13",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-14",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-15",
+                "net": 0.0
+              },
+              {
+                "date": "2026-02-16",
+                "net": 0.0
+              }
+            ],
+            "as_of": "2026-01-18"
+          },
+          "forecast_kpis": {
+            "short_term_accuracy": null,
+            "mid_term_accuracy": null,
+            "long_term_accuracy": null
+          },
+          "liquidity": {
+            "total_balance": 307000.0,
+            "average_balance": 76750.0,
+            "largest_account": {
+              "id": "CONC",
+              "balance": 200000.0
+            },
+            "liquid_balance_estimate": 0.0,
+            "low_balance_count": 0,
+            "accounts": [
+              {
+                "id": "CONC",
+                "balance": 200000.0,
+                "pct_of_total": 65.15,
+                "liquidity_score": null,
+                "low_balance": false
+              },
+              {
+                "id": "OPER",
+                "balance": 45000.0,
+                "pct_of_total": 14.66,
+                "liquidity_score": null,
+                "low_balance": false
+              },
+              {
+                "id": "PAY",
+                "balance": 12000.0,
+                "pct_of_total": 3.91,
+                "liquidity_score": null,
+                "low_balance": false
+              },
+              {
+                "id": "MMF-01",
+                "balance": 50000.0,
+                "pct_of_total": 16.29,
+                "liquidity_score": null,
+                "low_balance": false
+              }
+            ]
+          },
+          "reconciliation_exceptions": 1
+        },
+        "charts": {
+          "cash_daily": [
+            {
+              "date": "2026-01-18",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-19",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-20",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-21",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-22",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-23",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-24",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-25",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-26",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-27",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-28",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-29",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-30",
+              "net": 0.0
+            },
+            {
+              "date": "2026-01-31",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-01",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-02",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-03",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-04",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-05",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-06",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-07",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-08",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-09",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-10",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-11",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-12",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-13",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-14",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-15",
+              "net": 0.0
+            },
+            {
+              "date": "2026-02-16",
+              "net": 0.0
+            }
+          ],
+          "top_accounts": [
+            {
+              "id": "CONC",
+              "balance": 200000.0,
+              "pct_of_total": 65.15,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "OPER",
+              "balance": 45000.0,
+              "pct_of_total": 14.66,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "PAY",
+              "balance": 12000.0,
+              "pct_of_total": 3.91,
+              "liquidity_score": null,
+              "low_balance": false
+            },
+            {
+              "id": "MMF-01",
+              "balance": 50000.0,
+              "pct_of_total": 16.29,
+              "liquidity_score": null,
+              "low_balance": false
+            }
+          ]
+        },
+        "human_summary": "[LLM simulated] Reporting summary for prompt length 3570"
+      }
+    },
+    "llm": {
+      "summary": "[LLM simulated] Investment plan summary for prompt length 16231"
+    }
+  },
+  "summary": "[LLM simulated] Investment plan summary for prompt length 16231"
+}

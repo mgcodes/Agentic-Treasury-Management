@@ -1,0 +1,9 @@
+# Optional dependencies (install when using LLM or LangGraph integration):
+# openai>=0.27.0
+# langgraph>=0.1.0
+# transformers>=4.30.0
+# accelerate>=0.20.0   # optional, for larger models
+# No mandatory external dependencies; uses Python 3.8+
+fastapi>=0.95.0
+uvicorn>=0.23.0
+Flask>=2.2.0

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Treasury Dashboard — Agentic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Agentic Treasury Management Dashboard`</div>
+    <div class="bank-meta">
+      <select id`="branchSelect">
+        <option>Head Office</option>
+        <option>City Branch</option>
+        <option>International Desk</option>
+      </select>
+      <button id="fetchBtn" class="fetch-btn">Fetch Output</button>
+      <button id="visualizeBtn" class="visualize-btn">Visualize</button>
+      <button id="themeToggle" class="theme-btn">Dark</button>
+      <div id="lastUpdated">Last: —</div>
+    </div>
+  </header>
+
+  <!-- KPI horizontal bar -->
+  <section class="kpi-bar" id="kpiBar">
+    <div class="kpi-scroll">
+      <!-- KPI cards inserted here -->
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="agents">
+      <h2>Dashboard</h2>
+      <div id="agentMenu" class="agent-menu">
+        <!-- Agent menu buttons inserted here -->
+      </div>
+      <div id="agentsList" class="agents-list">
+        <!-- Agent panels inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">&copy; Agentic Bank — Treasury Management</footer>
+
+  <!-- Spinner overlay shown while requests are in progress -->
+  <div id="spinner" class="spinner-overlay" aria-hidden="true" hidden>
+    <div class="spinner" role="status" aria-label="Loading"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // topbar visualize button navigates to visualizer page
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const vb = document.getElementById('visualizeBtn');
+      if(vb) vb.addEventListener('click', ()=>{ window.location.href = 'visualizer.html'; });
+    });
+  </script>
+</body>
+</html>

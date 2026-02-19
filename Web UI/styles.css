@@ -1,0 +1,99 @@
+.root{ }
+:root{--bg:#f6f8fb;--card:#fff;--accent:#0b57d0;--muted:#6b7280;--text:#0b1220;--border:rgba(11,17,32,0.06);--btn-bg:#ffffff;--btn-color:#0b57d0}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif}
+body{margin:0;background:var(--bg);color:var(--text)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--topbar-bg, linear-gradient(90deg,#063a7a, #0b57d0));color:#fff}
+.brand{font-weight:700}
+.bank-meta{display:flex;gap:12px;align-items:center}
+.topbar select, .topbar button, select, button{padding:8px 10px;border-radius:6px;border:1px solid var(--border)}
+/* make general buttons use the same background as the topbar for visual consistency */
+select,button{background:var(--topbar-bg, linear-gradient(90deg,#063a7a, #0b57d0));color:var(--btn-color);border:none;cursor:pointer}
+.theme-btn{background:transparent;color:var(--topbar-text, #fff);border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px}
+.visualize-btn{
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  font-weight:600;
+  transition:transform .06s ease, box-shadow .12s ease, background-color .08s ease;
+}
+.visualize-btn:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(2,6,23,0.12); }
+.visualize-btn:focus{ outline:2px solid rgba(59,130,246,0.18); outline-offset:2px; }
+
+.kpi-bar{background:transparent;padding:12px 20px;border-bottom:1px solid rgba(11,17,32,0.06)}
+.kpi-scroll{display:flex;gap:12px;overflow:auto;padding-bottom:4px}
+.kpi{flex:0 0 200px;background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(2,6,23,0.06)}
+.kpi .label{font-size:13px;color:var(--muted)}
+.kpi .value{font-size:18px;font-weight:700;margin-top:6px}
+
+.container{display:block;gap:20px;padding:20px}
+.agents{margin-top:10px}
+.agents-list{display:flex;flex-direction:column;gap:10px}
+.agent-card{background:var(--card);padding:16px 24px;border-radius:8px;box-shadow:0 1px 3px rgba(2,6,23,0.06)}
+.agent-card h3{margin:0 0 8px 0}
+.agent-card .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+.agent-card .body{margin-top:8px}
+
+/* Center content inside agent cards for better visual balance */
+.agent-card .body{max-width:980px;margin:0 auto;display:block}
+.agent-card .body table{margin:0 auto}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:6px;max-width:520px;margin:0 auto}
+
+.agent-menu{display:flex;gap:8px;margin:12px 0 8px 0;flex-wrap:wrap}
+.agent-menu button{padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
+.agent-menu button.active{background:var(--accent);color:#fff;border-color:transparent}
+
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid rgba(11,17,32,0.06);text-align:left;font-size:14px}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:6px}
+.kv .k{color:var(--muted);font-size:13px}
+.kv .v{font-weight:600}
+.footer{padding:12px;text-align:center;color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:700px){
+  .kpi{flex:0 0 160px}
+}
+
+/* Dark theme overrides when body[data-theme="dark"] is set */
+body[data-theme="dark"]{
+  --bg:#071026;
+  --card:#0b1220;
+  --accent:#3b82f6;
+  --muted:#94a3b8;
+  --text:#e6eef8;
+  --btn-bg: rgba(255,255,255,0.04);
+  --btn-color: #e6eef8;
+  --topbar-text: #fff;
+  --border: rgba(255,255,255,0.06);
+  /* dark topbar gradient to match light mode look but darker */
+  --topbar-bg: linear-gradient(90deg,#031024,#063a7a);
+}
+
+/* Ensure topbar internal controls contrast on dark background */
+.topbar select, .topbar button{
+  background: var(--topbar-bg);
+  color: var(--btn-color);
+  border: 1px solid var(--border);
+}
+
+/* Force topbar controls to use white text for maximum contrast in both themes */
+.topbar select, .topbar button, .topbar .fetch-btn, .topbar .visualize-btn, .topbar .theme-btn{
+  color: #fff;
+}
+
+/* Make visualize and theme buttons slightly more prominent in dark mode */
+.topbar .visualize-btn{ background: var(--topbar-bg); border-color: rgba(255,255,255,0.08); color: var(--btn-color); }
+.topbar .visualize-btn:hover{ filter:brightness(1.08); }
+
+/* In light mode ensure the visualize button text is white for prominence */
+body:not([data-theme="dark"]) .visualize-btn{ color: #fff; }
+.topbar .theme-btn{ background: transparent; color: var(--topbar-text); border-color: rgba(255,255,255,0.06); }
+
+/* Spinner overlay */
+.spinner-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(11,17,32,0.35);z-index:9999}
+.spinner-overlay[hidden]{display:none !important;pointer-events:none}
+.spinner{width:48px;height:48px;border-radius:50%;border:6px solid rgba(255,255,255,0.15);border-top-color:var(--accent);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+

@@ -1,0 +1,121 @@
+{
+  "meta": {"run_id": "heavy_2026_01_20", "notes": "Heavy payload exercising all agents with diverse accounts, schedules, transactions and investment universe"},
+
+  "accounts": [
+    {"id": "CONC", "balance": 500000.0, "min_balance": 0.0, "sweep_threshold": 20000.0, "daily_limit": 250000.0},
+    {"id": "OPER", "balance": 120000.0, "min_balance": 20000.0, "sweep_threshold": 30000.0, "daily_limit": 50000.0},
+    {"id": "PAY", "balance": 45000.0, "min_balance": 5000.0, "sweep_threshold": 15000.0, "daily_limit": 20000.0},
+    {"id": "MMF-01", "balance": 80000.0, "liquidity_score": 0.98},
+    {"id": "MMF-02", "balance": 60000.0, "liquidity_score": 0.92},
+    {"id": "ESCROW", "balance": 15000.0, "min_balance": 10000.0, "sweep_threshold": 12000.0},
+    {"id": "OPS2", "balance": 25000.0, "min_balance": 2000.0, "sweep_threshold": 5000.0}
+  ],
+
+  "prior_day": [
+    {"id": "CONC", "balance": 480000.0},
+    {"id": "OPER", "balance": 110000.0},
+    {"id": "PAY", "balance": 40000.0},
+    {"id": "MMF-01", "balance": 75000.0}
+  ],
+
+  "intraday": [
+    {"id": "OPER", "balance": 125000.0},
+    {"id": "PAY", "balance": 47000.0}
+  ],
+
+  "bank_transactions": [
+    {"id": "b1", "date": "2026-01-18", "amount": 120000.0, "type": "credit", "ref": "AR-1000", "description": "Large client payment"},
+    {"id": "b2", "date": "2026-01-18", "amount": -45000.0, "type": "debit", "ref": "AP-2000", "description": "Supplier settlement"},
+    {"id": "b3", "date": "2026-01-19", "amount": -8000.0, "type": "debit", "description": "Payroll run"},
+    {"id": "b4", "date": "2026-01-20", "amount": -3500.0, "type": "debit", "description": "Bank fees"},
+    {"id": "b5", "date": "2026-01-21", "amount": 15000.0, "type": "credit", "ref": "AR-1023", "description": "Receivable"}
+  ],
+
+  "ledger_transactions": [
+    {"id": "l1", "date": "2026-01-18", "amount": 120000.0, "type": "credit", "ref": "AR-1000", "description": "Recognized AR"},
+    {"id": "l2", "date": "2026-01-18", "amount": -45000.0, "type": "debit", "ref": "AP-2000", "description": "Accounts payable"},
+    {"id": "l3", "date": "2026-01-19", "amount": -7500.0, "type": "debit", "ref": "PR-001", "description": "Payroll estimate"}
+  ],
+
+  "inflows": [
+    {"date": "2026-01-21", "amount": 15000.0, "source": "AR batch 1023"},
+    {"date": "2026-01-24", "amount": 22000.0, "source": "expected receipts"},
+    {"date": "2026-02-01", "amount": 40000.0, "source": "contract milestone"}
+  ],
+
+  "outflows": [
+    {"date": "2026-01-22", "amount": 8000.0, "purpose": "payroll"},
+    {"date": "2026-01-25", "amount": 18000.0, "purpose": "supplier payments"},
+    {"date": "2026-01-28", "amount": 12000.0, "purpose": "taxes"}
+  ],
+
+  "ap_schedule": [
+    {"id": "ap1", "date": "2026-01-22", "amount": 8000.0, "vendor": "Supplier A"},
+    {"id": "ap2", "date": "2026-01-25", "amount": 18000.0, "vendor": "Supplier B"},
+    {"id": "ap3", "date": "2026-02-05", "amount": 35000.0, "vendor": "Supplier C"},
+    {"id": "ap4", "date": "2026-02-12", "amount": 12000.0, "vendor": "Supplier D"},
+    {"id": "ap5", "date": "2026-02-20", "amount": 9000.0, "vendor": "Supplier E"}
+  ],
+
+  "ar_schedule": [
+    {"id": "ar1", "date": "2026-01-21", "amount": 15000.0, "customer": "Client A"},
+    {"id": "ar2", "date": "2026-01-24", "amount": 22000.0, "customer": "Client B"},
+    {"id": "ar3", "date": "2026-02-01", "amount": 40000.0, "customer": "Client C"},
+    {"id": "ar4", "date": "2026-02-08", "amount": 18000.0, "customer": "Client D"},
+    {"id": "ar5", "date": "2026-02-18", "amount": 25000.0, "customer": "Client E"}
+  ],
+
+  "forecast_days": 90,
+
+  "liquidity": {
+    "accounts": [
+      {"id": "CONC", "balance": 500000.0, "liquidity_score": 0.99},
+      {"id": "MMF-01", "balance": 80000.0, "liquidity_score": 0.98},
+      {"id": "MMF-02", "balance": 60000.0, "liquidity_score": 0.92},
+      {"id": "OPER", "balance": 120000.0, "liquidity_score": 0.7},
+      {"id": "PAY", "balance": 45000.0, "liquidity_score": 0.5}
+    ],
+    "low_balance_threshold": 10000.0
+  },
+
+  "sweep": {
+    "main_account_id": "CONC",
+    "accounts": [
+      {"id": "CONC", "balance": 500000.0, "min_balance": 0.0, "target_balance": 100000.0},
+      {"id": "OPER", "balance": 120000.0, "min_balance": 20000.0, "target_balance": 30000.0},
+      {"id": "PAY", "balance": 45000.0, "min_balance": 5000.0, "target_balance": 15000.0},
+      {"id": "MMF-01", "balance": 80000.0, "min_balance": 0.0, "target_balance": 50000.0},
+      {"id": "ESCROW", "balance": 15000.0, "min_balance": 10000.0, "target_balance": 12000.0}
+    ]
+  },
+
+  "investment": {
+    "excess_cash": 150000.0,
+    "risk_limits": {"max_per_instrument": 0.3, "max_per_tenor": {"short": 0.5, "medium": 0.3, "long": 0.2}},
+    "universe": [
+      {"id": "inst_short_a", "tenor": "short", "expected_yield": 0.002, "liquidity_score": 0.95},
+      {"id": "inst_short_b", "tenor": "short", "expected_yield": 0.003, "liquidity_score": 0.9},
+      {"id": "inst_med_a", "tenor": "medium", "expected_yield": 0.012, "liquidity_score": 0.7},
+      {"id": "inst_med_b", "tenor": "medium", "expected_yield": 0.015, "liquidity_score": 0.6},
+      {"id": "inst_long_a", "tenor": "long", "expected_yield": 0.04, "liquidity_score": 0.4}
+    ]
+  },
+
+  "reconciliation": {
+    "bank_transactions": [
+      {"id": "b1", "amount": 120000.0, "ref": "AR-1000"},
+      {"id": "b2", "amount": -45000.0, "ref": "AP-2000"},
+      {"id": "b3", "amount": -8000.0}
+    ],
+    "ledger_transactions": [
+      {"id": "l1", "amount": 120000.0, "ref": "AR-1000"},
+      {"id": "l2", "amount": -45000.0, "ref": "AP-2000"},
+      {"id": "l4", "amount": -3500.0}
+    ],
+    "tolerance": 0.5
+  },
+
+  "reporting": {
+    "include_charts": true
+  }
+}

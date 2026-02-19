@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agent Workflow Visualizer</title>
+  <link rel="stylesheet" href="visualizer.css" />
+</head>
+<body>
+  <header class="viz-top">
+    <div class="brand">Agentic — Workflow Visualizer</div>
+    <div class="controls">
+      <button id="refreshBtn">Fetch / Refresh</button>
+      <a href="index.html">Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main class="viz-main">
+    <section class="viz-canvas" id="vizCanvas">
+      <svg id="vizSvg" class="viz-svg"></svg>
+      <div id="nodesContainer" class="nodes-container"></div>
+    </section>
+    <aside class="viz-panel" id="detailPanel">
+      <div id="vizStatus" class="viz-status">Status: —</div>
+      <h3 id="detailTitle">Select an agent</h3>
+      <div id="detailBody" class="detail-body">Click a node to view outputs</div>
+      <pre id="rawJson" class="raw-json" hidden></pre>
+    </aside>
+  </main>
+
+  <footer class="viz-footer">Visualizer — shows agent flow and outputs (interactive)</footer>
+
+  <script src="visualizer.js"></script>
+</body>
+</html>
