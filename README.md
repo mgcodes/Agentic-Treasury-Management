@@ -1,9 +1,5 @@
 # Agentic Sweeper — LangGraph-enabled Sweeping Agent
 
-This project provides a minimal agentic sweeper that can run as a local orchestrator
-or integrate with LangGraph when available. An OpenAI chat model can be used to
-augment decisions and provide human-readable justifications.
-
 Quick run
 
 Hugging Face is the default LLM (recommended for offline/open-source use).
